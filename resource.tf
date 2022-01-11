@@ -22,6 +22,10 @@ resource "aws_launch_configuration" "aws_launch" {
 	image_id = "ami-9876zyxw"  # invalid AMI id
 }
 
+resource "aws_launch_configuration" "aws_launch" {
+	image_id = "ami-9876zyxw"  # invalid AMI id
+}
+
 resource "aws_elasticache_cluster" "redis" {
   cluster_id           = "app"
   engine               = "redis"
