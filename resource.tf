@@ -18,6 +18,11 @@ resource "aws_s3_bucket" "deepsource-bucket-2" {
   provider = aws.central // invalid region
 }
 
+resource "aws_s3_bucket" "deepsource-bucket-3" {
+  acl = "public-read"   // make it private
+  provider = aws.central // invalid region
+}
+
 resource "aws_launch_configuration" "aws_launch" {
 	image_id = "ami-9876zyxw"  # invalid AMI id
 }
