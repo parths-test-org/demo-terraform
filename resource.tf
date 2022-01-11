@@ -7,7 +7,13 @@ resource "aws_s3_bucket" "deepsource-bucket" {
   provider = aws.central // invalid region
 }
 
-resource "aws_s3_bucket" "deepsource-bucket" {
+resource "aws_s3_bucket" "deepsource-bucket-1" {
+  acl = "public-read"   // make it private
+  provider = aws.central // invalid region
+}
+
+
+resource "aws_s3_bucket" "deepsource-bucket-2" {
   acl = "public-read"   // make it private
   provider = aws.central // invalid region
 }
